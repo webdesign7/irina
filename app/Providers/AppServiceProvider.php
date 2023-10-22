@@ -32,6 +32,10 @@ class AppServiceProvider extends ServiceProvider
             NavigationLink::make()->forSingleton('contact')
         );
 
+        TwillNavigation::addLink(
+            NavigationLink::make()->forSingleton('about')
+        );
+
         TwillAppSettings::registerSettingsGroup(
             SettingsGroup::make()
                 ->name('seo')
