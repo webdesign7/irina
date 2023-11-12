@@ -33,16 +33,27 @@
 
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">{{__('homepage.navigation.home')}}</a></li>
+                    <li class="nav-item"><a href="{{route('about')}}" class="nav-link">{{__('homepage.navigation.about')}}</a></li>
+                    <li class="nav-item"><a href="{{route('services')}}" class="nav-link">{{__('homepage.navigation.services')}}</a></li>
+                    <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">{{__('homepage.navigation.contact')}}</a></li>
                     <li class="nav-item ms-md-4">
                         <div class="dropdown">
-                            <button class="btn btn-tertiary dropdown-toggle ps-0 pe-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">English</button>
+                            <button class="btn btn-tertiary dropdown-toggle ps-0 pe-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ __('homepage.lang.'. LaravelLocalization::getCurrentLocaleName())}}
+                            </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Spanish</a></li>
-                                <li><a class="dropdown-item" href="#">French</a></li>
+                                @php $currentLocale = app()->currentLocale() @endphp
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    <li>
+                                        <a class="dropdown-item @if($currentLocale === $localeCode) active @endif" rel="alternate"
+                                        hreflang="{{ $localeCode }}"
+                                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                    >
+                                        {{ __('homepage.lang.'. $properties['name']) }}
+                                    </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </li>
@@ -67,28 +78,34 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <h5>Contact</h5>
+                <h5>{{__('homepage.footer.contact')}}</h5>
                 <ul>
-                    <li><a href="mailto:info@physchologicalhelp.com">info@physchologicalhelp.com</a></li>
-                    <li><a href="tel:020 - 020204413">020 - 020204413</a></li>
+                    <li><a href="mailto:{{TwillAppSettings::get('contact.contact-details.email')}}">
+                            {{TwillAppSettings::get('contact.contact-details.email')}}
+                        </a></li>
+                    <li><a href="tel:{{TwillAppSettings::get('contact.contact-details.phone')}}">{{TwillAppSettings::get('contact.contact-details.phone')}}</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
-                <h5>Follow</h5>
-                <ul class="ss">
-                    <li><a href="#"><i class="fa fa-twitter fa-1x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube fa-1x"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook fa-1x"></i></a></li>
+                <h5>{{__('homepage.footer.follow')}}</h5>
+                <ul class="list-inline">
+                    @foreach(TwillAppSettings::get('contact.contact-details.social-media-links') as $item)
+                        <li class="list-inline-item">
+                            <a  target="_blank " href="{{$item->content['link']}}"
+                                class="fa fa-md fa-{{$item->content['platform']}}">
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-md-3">
-                <h5>Site navigation</h5>
+                <h5>{{__('homepage.footer.site_navigation')}}</h5>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="{{route('home')}}">{{__('homepage.navigation.home')}}</a></li>
+                    <li><a href="{{route('about')}}">{{__('homepage.navigation.about')}}</a></li>
+                    <li><a href="{{route('services')}}">{{__('homepage.navigation.services')}}</a></li>
+                    <li><a href="{{route('contact')}}">{{__('homepage.navigation.contact')}}</a></li>
+                    <li><a href="#">{{__('homepage.navigation.terms')}}</a></li>
                 </ul>
             </div>
         </div>

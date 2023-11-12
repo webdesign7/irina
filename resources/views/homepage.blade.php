@@ -7,10 +7,10 @@
             <!-- slider navigation-->
             <nav id="slider-nav">
                 <div class="prev-btn">
-                    <p>Previous</p>
+                    <p> {{__('homepage.previous')}}</p>
                 </div>
                 <div class="next-btn">
-                    <p>Next</p>
+                    <p> {{__('homepage.next')}}</p>
                 </div>
             </nav>
 
@@ -20,8 +20,7 @@
                     <div class="container-fluid d-flex align-items-center h-100">
                         <div class="row">
                             <div class="col-12">
-                                <h2><span>Effective</span></h2>
-                                <h2><span>Psychological Help</span></h2>
+                                <h2><span>Effective <br> Psychological Help</span></h2>
                             </div>
                         </div>
                     </div>
@@ -34,35 +33,28 @@
         <div class="container-fluid align-items-center">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2>Warn Welcome to <b>Effective Psychological Help</b> for you to achive positive change in your personal life, relationship and busines.
+                    <h2>
+                        {{$homepage->description}}
+                    </h2>
                 </div>
-                <div class="col-12 col-md-4">
-                    <a href="#" class="rounded-circle">
-                        <div class="bg-image" style="background: url('/images/individual-psychology.jpeg');"></div>
-                        <div class="v-align">
-                            <p><b>Individual Psychology</b></p>
-                            <span>learn more</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4">
-                    <a href="#" class="rounded-circle">
-                        <div class="bg-image" style="background: url('/images/relationships.jpeg');"></div>
-                        <div class="v-align">
-                            <p><b>Relationship</b></p>
-                            <span>learn more</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-4">
-                    <a href="#" class="rounded-circle">
-                        <div class="bg-image" style="background: url('/images/business-psychology.jpeg');"></div>
-                        <div class="v-align">
-                            <p><b>Business Psychology</b></p>
-                            <span>learn more</span>
-                        </div>
-                    </a>
-                </div>
+
+
+                @foreach($services as $service)
+
+                    <div class="col-12 col-md-4">
+                        <a href="{{ route('service', $service->slug) }}" class="rounded-circle">
+                            <div class="bg-image" style="background: url({{ $service->cmsImage('thumb') }});"></div>
+                            <div class="v-align">
+                                <p><b>{{$service->title}}</b></p>
+                                <span>
+                                    {{__('homepage.learn_more')}}
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+
+                @endforeach
+
             </div>
         </div>
     </div>
@@ -75,14 +67,15 @@
                 <div class="col-12 col-md-6">
                     <div class="author-image">
                         <a href="#" class="rounded-circle" style="background: url('https://source.unsplash.com/category/buildings');">
-                            <img src="/images/woman.jpg" alt=""/>
+                            <img src="{{ $homepage->cmsImage('about-thumb', 'mobile') }}" alt=""/>
                         </a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="description">
-                        <h2>About Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+                        <h2>{{__('homepage.about-title')}}</h2>
+                        <p>{{$homepage->about}}</p>
+                        <a class="transparent-button" href="{{ route('about') }}">learn more</a>
                     </div>
                 </div>
             </div>
@@ -93,36 +86,25 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <h2>Testimonials</h2>
+                    <h2>{{__('homepage.testimonials')}}</h2>
                 </div>
                 <div class="col-12">
                     <div class="list-testimonials">
-                        <div class="testimonial-box">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="rating" data-rating="5">
+
+                        @foreach($testimonials as $testimonial)
+                            <div class="testimonial-box">
+                                <p>{{$testimonial['content']}}</p>
+                                <span class="rating" data-rating="5">
                             <span aria-hidden="true">★★★★★</span>
                         </span>
-                            <h6>John Doe</h6>
-                        </div>
-                        <div class="testimonial-box">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut labore et dolore magna aliqua aliqua ut labore et dolore magna aliqua.</p>
-                            <span class="rating" data-rating="5">
-                            <span aria-hidden="true">★★★★★</span>
-                        </span>
-                            <h6>John Doe</h6>
-                        </div>
-                        <div class="testimonial-box">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <span class="rating" data-rating="5">
-                            <span aria-hidden="true">★★★★★</span>
-                        </span>
-                            <h6>John Doe</h6>
-                        </div>
+                                <h6>{{$testimonial['author']}}</h6>
+                            </div>
+                        @endforeach
+
                     </div>
                 </div>
-                <div class="col-12 text-center">
-                    <a href="#" class="btn btn-primary">contact us today and find our how can we help you</a>
-                </div>
+
+                @include('site.partials.cta')
             </div>
         </div>
     </div>

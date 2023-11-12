@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\HomepageController;
+use App\Http\Controllers\Frontend\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,29 +25,20 @@ Route::group([
     'middleware' => ['localize', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
 ], function () {
 
-    Route::get(LaravelLocalization::transRoute('routes.services'), function () {
-        return view('site.services.index', [
-            'services' => Service::published()->orderBy('created_at', 'desc')->get(),
-        ]);
-    })->name('services');
+    Route::get(LaravelLocalization::transRoute('routes.services'), [ServiceController::class, 'index'])
+        ->name('services');
 
-    Route::get(LaravelLocalization::transRoute('routes.service'), function (Service $service) {
-        return view('site.services.show', [
-            'item' => $service,
-        ]);
-    })->name('service');
+    Route::get(LaravelLocalization::transRoute('routes.service'), [ServiceController::class, 'show'])
+        ->name('service');
 
-    Route::get(LaravelLocalization::transRoute('routes.contact'), function () {
-        return view('contact');
-    })->name('contact');
+    Route::get(LaravelLocalization::transRoute('routes.contact'), ContactController::class)
+        ->name('contact');
 
-    Route::get(LaravelLocalization::transRoute('routes.about'), function () {
-        return view('about');
-    })->name('about');
+    Route::get(
+        LaravelLocalization::transRoute('routes.about'), AboutController::class
+    )->name('about');
 
-    Route::get('/', function () {
-        return view('homepage');
-    })->name('home');;
+    Route::get('/', HomepageController::class)->name('home');
 
 });
 

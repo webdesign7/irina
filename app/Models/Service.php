@@ -20,13 +20,18 @@ class Service extends Model implements Sortable, LocalizedUrlRoutable
     protected $fillable = [
         'published',
         'title',
+        'subtitle',
+        'thumb',
         'description',
         'position',
+        'short_description',
     ];
 
     public $translatedAttributes = [
         'title',
+        'subtitle',
         'description',
+        'short_description',
         'active',
     ];
 
@@ -34,11 +39,28 @@ class Service extends Model implements Sortable, LocalizedUrlRoutable
         'title',
     ];
 
-    public function resolveRouteBinding($slug, $field = null)
+    public $mediasParams = [
+        'thumb' => [
+            'default' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 16 / 9,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'mobile',
+                    'ratio' => 1,
+                ],
+            ],
+        ],
+    ];
+
+    public function resolveRouteBinding($value, $field = null)
     {
         /** @var ServiceRepository $repository */
         $repository = app(ServiceRepository::class);
-        $service = $repository->forSlug($slug);
+        $service = $repository->forSlug($value);
 
         abort_if(! $service, 404);
 

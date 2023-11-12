@@ -29,7 +29,13 @@ class ContactController extends BaseModuleController
         $form = parent::getForm($model);
 
         $form->add(
-            Input::make()->name('description')->label('Description')->translatable()
+            Input::make()->name('description')
+                ->label('Description')->translatable()
+        );
+
+        $form->add(
+            Input::make()->name('title')
+                ->label('Title')->translatable()
         );
 
         return $form;

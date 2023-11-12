@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Models\Contracts\TwillModelContract;
+use A17\Twill\Services\Forms\Fields\Wysiwyg;
 use A17\Twill\Services\Listings\Columns\Text;
 use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
@@ -29,8 +30,31 @@ class AboutController extends BaseModuleController
         $form = parent::getForm($model);
 
         $form->add(
-            Input::make()->name('description')->label('Description')->translatable()
+            Input::make()->name('title')->label('Title')->translatable()
         );
+
+        $form->add(
+            Wysiwyg::make()->name('description')
+                ->toolbarOptions([ [ 'header' => [1, 2, false] ], 'ordered', 'bullet', 'link', 'image' ])
+                ->label('Description')->translatable()
+        );
+
+        $form->add(
+            Input::make()->name('job_title')->label('Job Title')->translatable()
+        );
+
+        $form->add(
+            Input::make()->name('name')->label('Name')->translatable()
+        );
+
+        $form->add(
+            Input::make()->type('textarea')
+                ->name('bio')
+                ->label('Name')
+                ->translatable()
+        );
+
+
 
         return $form;
     }

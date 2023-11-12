@@ -8,7 +8,7 @@ use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
 
-class About extends Model 
+class About extends Model
 {
     use HasBlocks, HasTranslation, HasMedias, HasRevisions;
 
@@ -16,12 +16,18 @@ class About extends Model
         'published',
         'title',
         'description',
+        'name',
+        'bio',
+        'job_title',
     ];
-    
+
     public $translatedAttributes = [
         'title',
         'description',
         'active',
+        'name',
+        'bio',
+        'job_title',
     ];
-    
+
 }

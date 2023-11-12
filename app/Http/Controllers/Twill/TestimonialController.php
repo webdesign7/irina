@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Twill;
 
 use A17\Twill\Models\Contracts\TwillModelContract;
+use A17\Twill\Services\Forms\InlineRepeater;
 use A17\Twill\Services\Listings\Columns\Text;
 use A17\Twill\Services\Listings\TableColumns;
 use A17\Twill\Services\Forms\Fields\Input;
@@ -30,6 +31,20 @@ class TestimonialController extends BaseModuleController
 
         $form->add(
             Input::make()->name('description')->label('Description')->translatable()
+        );
+
+        $form->add(
+            InlineRepeater::make()->name('testimonials')
+                ->fields([
+                    Input::make()
+                        ->required()
+                        ->name('author'),
+                    Input::make()
+                        ->type('textarea')
+                        ->maxLength(100)
+                        ->required()
+                        ->name('content'),
+                ])
         );
 
         return $form;

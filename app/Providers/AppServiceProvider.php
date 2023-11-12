@@ -25,6 +25,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         TwillNavigation::addLink(
+            NavigationLink::make()->forSingleton('homepage'),
+        );
+
+        TwillNavigation::addLink(
             NavigationLink::make()->forModule('services'),
         );
 
@@ -34,6 +38,10 @@ class AppServiceProvider extends ServiceProvider
 
         TwillNavigation::addLink(
             NavigationLink::make()->forSingleton('about')
+        );
+
+        TwillNavigation::addLink(
+            NavigationLink::make()->forSingleton('testimonial')
         );
 
         TwillAppSettings::registerSettingsGroup(

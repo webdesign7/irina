@@ -1,3 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+@font-face {
+    font-family:"Marcellus-Regular";
+    src: url("../fonts/Marcellus-Regular.ttf") format("truetype");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Marcellus-Regular, serif;
+}
+
+p, ul, .btn {
+    font-family: "Lato", serif;
+    font-weight: 300;
+}
 footer .footer-brand img {
     width: 65%;
 }
+
+input::placeholder, textarea::placeholder {
+    font-family: "Lato", serif;
+    font-weight: 300;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-cta {
+    background: #193952;
+    border-radius: 30px;
+    padding: 14px 100px;
+    border: 0;
+    margin: 80px auto 100px auto;
+    transition: all 0.3s;
+}
+
+section.page, .three-circles-section, .testimonials-section {
+    background-color: blanchedalmond;
+}
+
+.btn-primary:hover {
+    background-color: slategrey;
+    border-color: slategrey;
+}
+
+.three-circles-section .rounded-circle p {
+    font-family: Marcellus-Regular, serif;
+}
+
+.banner .container-fluid h2 span {
+    text-shadow: none;
+}
+.about-us-section {
+    background-color: #7ca4a2;
+    color: white;
+}
+
+.testimonials-section .list-testimonials .testimonial-box {
+    background-color: white;
+}
+
+a.transparent-button {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-weight: lighter;
+    font-size: 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+}
+
+.fa {
+    width: 40px;
+    height: 40px;
+    color: #1a3854 !important;
+    background-color: #FFF;
+    border: 1px solid #1a3854;
+    padding-top: 12px;
+    border-radius: 22px;
+    -moz-border-radius: 22px;
+    -webkit-border-radius: 22px;
+    -o-border-radius: 22px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #1a3854;
+}
+
+
+
+
