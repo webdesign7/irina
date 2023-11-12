@@ -29,6 +29,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 20px;
         }
 
         .featurette-image-bg {

@@ -72,7 +72,6 @@ a.transparent-button {
     border-radius: 20px;
     text-decoration: none;
     display: inline-block;
-    float: right;
 }
 
 .fa {
@@ -94,11 +93,45 @@ a.transparent-button {
     background-color: #1a3854;
 }
 
+
+.about-us-section .description {
+    text-align: right;
+}
+
 .about-us-section .description p {
     font-size: 16px;
     line-height: 34px;
 }
 
+.testimonials-section .heading {
+    margin-bottom: 40px;
+}
+
+.testimonials-section p {
+    font-size: 16px;
+}
+
+.testimonials-section h2 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .about-us-section .description {
+        text-align: center;
+    }
+
+    .testimonials-section .heading, .testimonials-section h2 {
+        text-align: center;
+    }
+
+    .contact-cta span {
+        display: none;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
 
 
 

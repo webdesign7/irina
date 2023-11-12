@@ -88,8 +88,9 @@
     <div class="testimonials-section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 heading">
                     <h2>{{__('homepage.testimonials')}}</h2>
+                    <p>Healing is a priority. My clients agree.</p>
                 </div>
                 <div class="col-12">
                     <div class="list-testimonials">
