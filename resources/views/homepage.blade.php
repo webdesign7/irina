@@ -20,7 +20,10 @@
                     <div class="container-fluid d-flex align-items-center h-100">
                         <div class="row">
                             <div class="col-12">
-                                <h2><span>Effective <br> Psychological Help</span></h2>
+                                <h2><span>
+                                        {!! __('homepage.header-title') !!}
+                                    </span>
+                                </h2>
                             </div>
                         </div>
                     </div>

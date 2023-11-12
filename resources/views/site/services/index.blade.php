@@ -120,35 +120,35 @@
             <div class="offset-md-2 col-md-4 left">
 
                 <div class="content">
-                    <h2 class="featurette-heading mb-3">Increase your relationship capacity in therapy with professionals</h2>
-                    <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                        tellus ac cursus commodo.</p>
+                    <h2 class="featurette-heading mb-3">
+                        {{$servicePage->block_title}}
+                    </h2>
+                    <p>
+                        {{$servicePage->block_description}}
+                    </p>
                     <br>
                     <div class="row">
-
-                        <div class="col">
-                            <ul>
-                                <li>Individual psychology.</li>
-                                <li>Relationship counselling.</li>
-                                <li>Eating disorders</li>
-                            </ul>
-                        </div>
-
-                        <div class="col">
-                            <ul>
-                                <li>Dependency and codependency</li>
-                                <li>Clinical hypnosis</li>
-                                <li>Business psychology</li>
-                            </ul>
-                        </div>
-
+                        @php
+                            $currentLocale = App::currentLocale();
+                            $halved = array_chunk($servicePage->services, ceil(count($servicePage->services)/2));
+                        @endphp
+                        @foreach($halved as $half)
+                            <div class="col">
+                                <ul>
+                                    @foreach($half as $item)
+                                        <li>
+                                            @if (isset($item['title'][$currentLocale]))
+                                                {{ $item['title'][$currentLocale] }}
+                                            @else
+                                                {{ $item['title']['en'] }}
+                                            @endif
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endforeach
                     </div>
-
                 </div>
-
-
-
             </div>
             <div class="col-md-6 right">
                 <div class="featurette-image-bg">

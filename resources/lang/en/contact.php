@@ -11,6 +11,7 @@ return [
         'placeholder-email' => 'Please enter your email ...',
         'placeholder-text' => 'Your message ... ',
         '15-m-consultation' => 'You, I would like a 15min consultation !',
+        'submit-button' => 'Submit enquiry',
     ],
     'work_days' => 'Working days',
     'saturday' => 'Saturday',

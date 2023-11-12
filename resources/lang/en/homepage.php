@@ -20,5 +20,6 @@ return [
         'services' => 'Services',
         'contact' => 'Contact',
         'terms' => 'Terms & Conditions',
-    ]
+    ],
+    'header-title' => 'Effective <br> Psychological Help'
 ];

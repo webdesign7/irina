@@ -6,7 +6,7 @@
         .jumbotron {
             height: 300px;
             background-size: cover;
-            background-image: url('/images/bg1.jpg');
+            background-image: url('/images/bg3.jpg');
         }
 
         .jumbotron .container {
@@ -169,12 +169,14 @@
                                         name="message" required class="form-control" id="message" ></textarea>
                                     </div>
 
-                                    <div class="form-group text-center">
+                                    <div class="form-group">
                                         <div class="h-captcha" data-captcha="true"></div>
                                     </div>
 
                                     <div class="form-group text-center">
-                                        <button class="btn btn-info" type="submit">Submit Form</button>
+                                        <button class="btn btn-primary contact-cta mt-1 mb-1" type="submit">
+                                            {{__('contact.form.submit-button')}}
+                                        </button>
                                     </div>
                                 </form>
 
