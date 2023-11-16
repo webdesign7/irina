@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Service;
 use App\Repositories\ContactRepository;
 
 class ContactController extends Controller
@@ -18,9 +19,12 @@ class ContactController extends Controller
     {
         $page = $this->repository->get()->firstOrFail();
 
+        $services = Service::published()->orderBy('created_at', 'desc')->get();
+
         if ($page->published) {
             return view('site.contact', [
-                'page' => $page
+                'page' => $page,
+                'services' => $services
             ]);
         }
         abort(404);

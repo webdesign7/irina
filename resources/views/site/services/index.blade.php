@@ -4,9 +4,9 @@
 
     <style>
         .jumbotron {
-            height: 300px;
+            height: 400px;
             background-size: cover;
-            background-image: url('/images/bg2.jpg');
+            background-image: url('/images/services-bg-1.jpg');
         }
 
         .jumbotron .container {
@@ -19,8 +19,8 @@
 
 
         .rounded-circle, .card-img-top {
-            height: 80px;
-            width: 80px;
+            height: 100px;
+            width: 100px;
         }
 
         .rounded-circle {
@@ -54,7 +54,7 @@
         }
 
         .featurette-image-bg {
-            height: 500px;
+            height: 600px;
             background-size: cover;
             background-image: url(https://wellmont.qodeinteractive.com/wp-content/uploads/2022/11/services-title-img.jpg);
         }
@@ -71,7 +71,7 @@
         </div>
 
 
-        <div class="container mb-5">
+        <div class="container mb-5 pb-3 pt-3">
             <div class="row">
 
                 <div class="text-center mb-5">
@@ -90,7 +90,7 @@
 
                                             <div class="rounded-circle overflow-hidden position-absolute">
                                                 <img class="card-img-top img-cover"
-                                                     src="{{ $service->cmsImage('thumb') }}">
+                                                     src="{{ $service->cmsImage('thumb','mobile') }}">
                                             </div>
 
                                         </div>
@@ -110,7 +110,6 @@
                     <p>{{ __('news.no_news') }}</p>
                 @endif
 
-
             </div>
         </div>
 
@@ -119,8 +118,8 @@
         <div class="row featurette">
             <div class="offset-md-2 col-md-4 left">
 
-                <div class="content">
-                    <h2 class="featurette-heading mb-3">
+                <div class="content mt-3 mb-3">
+                    <h2 class="featurette-heading mb-5">
                         {{$servicePage->block_title}}
                     </h2>
                     <p>

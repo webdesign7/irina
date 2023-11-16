@@ -5,9 +5,10 @@
 
     <style>
         .jumbotron {
-            height: 300px;
+            height: 400px;
             background-size: cover;
-            background-image: url('/images/bg1.jpg');
+            background-position: bottom;
+            background-image: url('/images/about-bg-1.jpg');
         }
 
         .jumbotron .container {

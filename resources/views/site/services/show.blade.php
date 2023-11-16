@@ -2,12 +2,23 @@
 
 @section('content')
 
+
     <style>
         .jumbotron {
-            height: 300px;
+            height: 400px;
             background-size: cover;
-            background-image: url({{$service->cmsImage('thumb')}});
+            background-position: center;
+            background-image: url({!! $service->cmsImage('thumb') !!});
         }
+
+        .overlay {
+            height: 400px;
+            width: 100vw;
+            background: black;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
         .jumbotron .container {
             height: 100%;
             display: flex;
@@ -15,26 +26,32 @@
             justify-content: center;
             color: white;
         }
+
+
     </style>
 
-    <div class="jumbotron text-center mb-5">
-        <div class="container">
-            <h1 class="display-3">{{$service->title}}</h1>
-        </div>
-    </div>
+    <section class="page service-page">
+            <div class="jumbotron text-center mb-5">
+                <div class="overlay">
+                    <div class="container">
+                        <h1 class="display-3">{{$service->title}}</h1>
+                    </div>
+                </div>
+            </div>
 
-    <div class="container-fluid pt-5 mt-5 pb-5 mb-5">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                {!! $service->description !!}
+
+            <div class="container-fluid pt-5 mt-5 pb-5 mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <br>
+                        {!! $service->description !!}
+                    </div>
+                </div>
             </div>
 
             <div class="col-12">
                 @include('site.partials.cta')
             </div>
 
-
-        </div>
-    </div>
+    </section>
 @endsection

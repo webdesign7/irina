@@ -44,7 +44,7 @@ class Service extends Model implements Sortable, LocalizedUrlRoutable
             'default' => [
                 [
                     'name' => 'default',
-                    'ratio' => 16 / 9,
+                    'ratio' => 16 / 4,
                 ],
             ],
             'mobile' => [

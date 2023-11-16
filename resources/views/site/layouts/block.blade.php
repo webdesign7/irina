@@ -11,6 +11,8 @@
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/flagpack@1.0.5/dist/flagpack.min.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="https://cosminlazar.com/Webdesign7/eph.com/css/style.css" />
@@ -27,35 +29,45 @@
             <a href="/" class="navbar-brand">
                 <img src="/images/logo-recatngular.png" alt=""/>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon top-bar"></span>
+                <!-- <span class="toggler-icon middle-bar"></span> -->
+                <span class="toggler-icon bottom-bar"></span>
             </button>
+
+
+
 
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">{{__('homepage.navigation.home')}}</a></li>
-                    <li class="nav-item"><a href="{{route('about')}}" class="nav-link">{{__('homepage.navigation.about')}}</a></li>
-                    <li class="nav-item"><a href="{{route('services')}}" class="nav-link">{{__('homepage.navigation.services')}}</a></li>
-                    <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">{{__('homepage.navigation.contact')}}</a></li>
+
+                    <li class="nav-item"><a href="/" class="nav-link @if(Route::is('home') ) active @endif" aria-current="page">{{__('homepage.navigation.home')}}</a></li>
+                    <li class="nav-item"><a href="{{route('about')}}" class="nav-link @if(Route::is('about') ) active @endif">{{__('homepage.navigation.about')}}</a></li>
+                    <li class="nav-item"><a href="{{route('services')}}" class="nav-link @if(Route::is('services') ) active @endif">{{__('homepage.navigation.services')}}</a></li>
+                    <li class="nav-item"><a href="{{route('contact')}}" class="nav-link @if(Route::is('contact') ) active @endif">{{__('homepage.navigation.contact')}}</a></li>
                     <li class="nav-item ms-md-4">
-                        <div class="dropdown">
-                            <button class="btn btn-tertiary dropdown-toggle ps-0 pe-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ __('homepage.lang.'. LaravelLocalization::getCurrentLocaleName())}}
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                @php $currentLocale = app()->currentLocale() @endphp
-                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                    <li>
-                                        <a class="dropdown-item @if($currentLocale === $localeCode) active @endif" rel="alternate"
-                                        hreflang="{{ $localeCode }}"
-                                        href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
-                                    >
-                                        {{ __('homepage.lang.'. $properties['name']) }}
-                                    </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
+
+                        <ul class="languages">
+                            @php $currentLocale = app()->currentLocale() @endphp
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                   class="@if($currentLocale === $localeCode) active @endif">
+                                    @if($localeCode === 'en')
+                                        <span class="fp fp-rounded gb-eng"></span>
+                                    @endif
+
+                                    @if($localeCode === 'ru')
+                                        <span class="fp fp-rounded ru"></span>
+                                    @endif
+                                    <p>{{ __('homepage.lang.'. $properties['name']) }}</p>
+                                </a>
+                            </li>
+                            @endforeach
+
+                        </ul>
+
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,7 @@
 
     <style>
         .jumbotron {
-            height: 300px;
+            height: 400px;
             background-size: cover;
             background-image: url('/images/bg3.jpg');
         }
@@ -143,17 +143,19 @@
                                     <div class="row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <select class="form-control">
+                                                <select name="interested_service" class="form-control">
                                                     <option value="">Service you're interested</option>
-                                                    <option value="business">Business psychology</option>
-                                                    <option value="business">Business psychology</option>
-                                                    <option value="business">Business psychology</option>
+                                                    @foreach($services as $service);
+                                                        <option value="{{$service->title}}">{{$service->title}}</option>
+                                                    @endforeach
+
+
                                                 </select>
                                             </div>
 
                                             <div class="form-group">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <input value="yes" name="15min-consultation" class="form-check-input" type="checkbox" id="gridCheck">
                                                     <label class="form-check-label" for="gridCheck">
                                                         {{__('contact.form.15-m-consultation')}}
                                                     </label>

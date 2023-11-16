@@ -64,12 +64,15 @@
 
     <div class="image-separator parallax-window" data-bleed="10" data-parallax="scroll" data-image-src="/images/paralax1.jpeg"></div>
 
-    <div class="about-us-section">
+    <div class="about-us-section on-scroll-image-wrapper" data-aos="" data-aos-once="false" data-aos-delay="0">
+
+        <img class="on-scroll-image" src="/images/leaf-r1.png" style="opacity:0.1" />
+
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-12 col-md-6">
                     <div class="author-image">
-                        <a href="#" class="rounded-circle" style="background: url('https://source.unsplash.com/category/buildings');">
+                        <a href="#" class="rounded-circle">
                             <img src="{{ $homepage->cmsImage('about-thumb', 'mobile') }}" alt=""/>
                         </a>
                     </div>
@@ -85,7 +88,10 @@
         </div>
     </div>
 
-    <div class="testimonials-section">
+    <div class="testimonials-section on-scroll-image-wrapper" data-aos="" data-aos-once="false" data-aos-delay="0">
+
+        <img class="on-scroll-image right" src="/images/leaf-r1-white.png" style="opacity:0.2" />
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 heading">
