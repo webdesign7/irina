@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?v">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/flagpack@1.0.5/dist/flagpack.min.css">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="https://cosminlazar.com/Webdesign7/eph.com/css/style.css" />
-    <link type="text/css" rel="stylesheet" href="/css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="https://cosminlazar.com/Webdesign7/eph.com/css/style.css?v=1" />
+    <link type="text/css" rel="stylesheet" href="/css/custom.css?v=1" />
 
     <title>{{TwillAppSettings::getTranslated('seo.seo.title')}}</title>
 </head>
@@ -125,7 +125,7 @@
 
             <div class="col text-center pt-5 text-muted">
                 <p><small>{{__('homepage.footer.art-by')}}<br>
-                        {{__('homepage.footer.copyright')}} &copy; @php echo date('Y');  @endphp {{__('homepage.footer.all-rights')}}</small></p>
+                        {{__('homepage.footer.copyright')}} &copy; @php echo date('Y'); @endphp {{__('homepage.footer.all-rights')}}</small></p>
             </div>
 
         </div>
@@ -133,7 +133,7 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cosminlazar.com/Webdesign7/eph.com/js/scripts.min.js"></script>
+<script src="https://cosminlazar.com/Webdesign7/eph.com/js/scripts.min.js?v=1"></script>
 
 <!-- Optional JavaScript; choose one of the two! -->
 
