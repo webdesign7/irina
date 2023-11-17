@@ -121,6 +121,14 @@
                 </ul>
             </div>
         </div>
+        <div class="row">
+
+            <div class="col text-center pt-5 text-muted">
+                <p><small>{{__('homepage.footer.art-by')}}<br>
+                        {{__('homepage.footer.copyright')}} &copy; @php echo date('Y');  @endphp {{__('homepage.footer.all-rights')}}</small></p>
+            </div>
+
+        </div>
     </div>
 </footer>
 

@@ -13,6 +13,9 @@ return [
         'contact' => 'Contact',
         'follow' => 'Follow us',
         'site_navigation' => 'Site navigation',
+        'art-by' => 'Original art by Timophey Spiridonov.',
+        'copyright' => 'Copyright',
+        'all-rights' => 'All rights reserved '
     ],
     'navigation' => [
         'home' => 'Home',
