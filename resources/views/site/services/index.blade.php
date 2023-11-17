@@ -81,7 +81,7 @@
                 @if (!empty($services))
                     @foreach ($services as $service)
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 service-box">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">

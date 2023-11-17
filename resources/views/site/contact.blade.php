@@ -124,16 +124,17 @@
                                     <input type="hidden" name="access_key" value="8fd55e58-785d-4dd5-9f5f-1d6a312ce2e3">
 
                                     <div class="row">
-                                        <div class="col">
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                                <input name="email" type="email" class="form-control" id="exampleInputEmail1"
-                                                       placeholder="{{__('contact.form.placeholder-email')}}">
+                                                <input name="name" required type="text" class="form-control" id="full-name"
+                                                       placeholder="{{__('contact.form.placeholder-name')}}">
                                             </div>
                                         </div>
-                                        <div class="col">
+
+                                        <div class="col-md-6">
                                             <div class="form-group">
-                                                <input name="name" type="text" class="form-control" id="full-name"
-                                                       placeholder="{{__('contact.form.placeholder-name')}}">
+                                                <input name="email" required type="email" class="form-control" id="exampleInputEmail1"
+                                                       placeholder="{{__('contact.form.placeholder-email')}}">
                                             </div>
                                         </div>
                                     </div>
