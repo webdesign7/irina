@@ -5,7 +5,6 @@
 
     <style>
         .jumbotron {
-            height: 400px;
             background-size: cover;
             background-position: bottom;
             background-image: url('/images/about-bg-1.jpg');

@@ -36,6 +36,11 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.jumbotron {
+    height: 400px;
+    background-size: cover;
+}
+
 .contact-cta {
     background: #193952;
     border-radius: 30px;
@@ -153,6 +158,13 @@ a.transparent-button {
     background: rgba(0, 0, 0, 0.3);
 }
 
+footer ul li {
+    margin-bottom: 0;
+}
+
+footer ul li a {
+    font-size: 0.8em;
+}
 
 @media (max-width: 767px) {
     .about-us-section .description {
@@ -169,6 +181,31 @@ a.transparent-button {
 
     footer {
         text-align: center;
+    }
+
+    .three-circles-section h2 {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+    }
+
+    .three-circles-section {
+        padding-top: 50px;
+    }
+
+    .about-us-section .description p {
+        font-size: 1.1em;
+    }
+
+    .jumbotron {
+        height: 260px;
+    }
+
+    p, ul, .btn {
+        font-size: 1.1em;
+    }
+
+    .card-text {
+        max-width: 230px;
     }
 }
 

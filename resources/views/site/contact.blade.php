@@ -4,8 +4,6 @@
 
     <style>
         .jumbotron {
-            height: 400px;
-            background-size: cover;
             background-image: url('/images/bg3.jpg');
         }
 
@@ -144,7 +142,9 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <select name="interested_service" class="form-control">
-                                                    <option value="">Service you're interested</option>
+                                                    <option value="">
+                                                        {{__('contact.form.select-service-placeholder')}}
+                                                    </option>
                                                     @foreach($services as $service);
                                                         <option value="{{$service->title}}">{{$service->title}}</option>
                                                     @endforeach

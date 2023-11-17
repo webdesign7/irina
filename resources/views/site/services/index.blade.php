@@ -4,7 +4,6 @@
 
     <style>
         .jumbotron {
-            height: 400px;
             background-size: cover;
             background-image: url('/images/services-bg-1.jpg');
         }
@@ -118,7 +117,7 @@
         <div class="row featurette">
             <div class="offset-md-2 col-md-4 left">
 
-                <div class="content mt-3 mb-3">
+                <div class="content p-4">
                     <h2 class="featurette-heading mb-5">
                         {{$servicePage->block_title}}
                     </h2>

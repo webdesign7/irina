@@ -12,6 +12,7 @@ return [
         'placeholder-text' => 'Ваше сообщение ... ',
         '15-m-consultation' => 'Я хотел бы получить 15-минутную консультацию!',
         'submit-button' => 'Отправить запрос',
+        'select-service-placeholder' => 'Выберите интересующую вас услугу'
     ],
     'work_days' => 'Рабочие дни',
     'saturday' => 'Суббота',
