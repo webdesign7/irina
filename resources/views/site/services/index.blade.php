@@ -16,12 +16,6 @@
             color: white;
         }
 
-
-        .rounded-circle, .card-img-top {
-            height: 100px;
-            width: 100px;
-        }
-
         .rounded-circle {
             right: 5px;
         }
@@ -33,6 +27,7 @@
 
         .card-text {
             color: dimgray;
+            font-size: 1.2em;
         }
 
         .card {
@@ -55,7 +50,7 @@
         .featurette-image-bg {
             height: 600px;
             background-size: cover;
-            background-image: url(https://wellmont.qodeinteractive.com/wp-content/uploads/2022/11/services-title-img.jpg);
+            background-image: url('/images/about-me-sitting.jpg');
         }
 
     </style>
@@ -115,7 +110,7 @@
 
 
         <div class="row featurette">
-            <div class="offset-md-2 col-md-4 left">
+            <div class="offset-md-1 col-md-5 left">
 
                 <div class="content p-4">
                     <h2 class="featurette-heading mb-5">
@@ -126,25 +121,23 @@
                     </p>
                     <br>
                     <div class="row">
-                        @php
-                            $currentLocale = App::currentLocale();
-                            $halved = array_chunk($servicePage->services, ceil(count($servicePage->services)/2));
-                        @endphp
-                        @foreach($halved as $half)
-                            <div class="col">
-                                <ul>
-                                    @foreach($half as $item)
-                                        <li>
-                                            @if (isset($item['title'][$currentLocale]))
-                                                {{ $item['title'][$currentLocale] }}
-                                            @else
-                                                {{ $item['title']['en'] }}
-                                            @endif
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endforeach
+                        <div class="col-lg-12">
+                            @php
+                                $currentLocale = App::currentLocale();
+                                $halved = array_chunk($servicePage->services, ceil(count($servicePage->services)/2));
+                            @endphp
+                            <ul>
+                            @foreach($servicePage->services as $item)
+                                <li>
+                                    @if (isset($item['title'][$currentLocale]))
+                                        {{ $item['title'][$currentLocale] }}
+                                    @else
+                                        {{ $item['title']['en'] }}
+                                    @endif
+                                </li>
+                            @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

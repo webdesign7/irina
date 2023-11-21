@@ -123,7 +123,7 @@
         </div>
         <div class="row">
 
-            <div class="col text-center pt-5 text-muted">
+            <div class="col text-center pt-5 copy-text">
                 <p><small>{{__('homepage.footer.art-by')}}<br>
                         {{__('homepage.footer.copyright')}} &copy; @php echo date('Y'); @endphp {{__('homepage.footer.all-rights')}}</small></p>
             </div>

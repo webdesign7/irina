@@ -60,7 +60,7 @@
 
 
         <div class="row featurette">
-            <div class="offset-md-2 col-md-4 left">
+            <div class="offset-md-1 col-md-5 left">
 
                 <div class="content">
                     <p>ABOUT ME</p>
