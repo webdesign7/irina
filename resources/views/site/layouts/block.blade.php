@@ -118,6 +118,29 @@
                     <li><a href="{{route('services')}}">{{__('homepage.navigation.services')}}</a></li>
                     <li><a href="{{route('contact')}}">{{__('homepage.navigation.contact')}}</a></li>
                     <li><a href="#">{{__('homepage.navigation.terms')}}</a></li>
+                    <li>
+
+                        <ul class="languages list-inline">
+                            @php $currentLocale = app()->currentLocale() @endphp
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li class="list-inline-item">
+                                    <a hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                       class="@if($currentLocale === $localeCode) active @endif">
+                                        @if($localeCode === 'en')
+                                            <span class="fp fp-rounded gb-eng"></span>
+                                        @endif
+
+                                        @if($localeCode === 'ru')
+                                            <span class="fp fp-rounded ru"></span>
+                                        @endif
+                                    </a>
+                                </li>
+                            @endforeach
+
+                        </ul>
+
+                    </li>
+
                 </ul>
             </div>
         </div>
