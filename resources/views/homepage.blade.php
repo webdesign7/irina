@@ -81,7 +81,9 @@
                     <div class="description">
                         <h2>{{__('homepage.about-title')}}</h2>
                         <p>{{$homepage->about}}</p>
-                        <a class="transparent-button" href="{{ route('about') }}">learn more</a>
+                        <a class="transparent-button" href="{{ route('about') }}">
+                            {{__('homepage.learn_more')}}
+                        </a>
                     </div>
                 </div>
             </div>
