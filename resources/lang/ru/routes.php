@@ -4,5 +4,6 @@ return [
     'services' => 'services',
     'contact' => 'contact',
     'about' => 'about-us',
-    'service' => 'uslughi/{service}',
+    'service' => 'services/{service}',
+    'page' => 'pages/{page}',
 ];

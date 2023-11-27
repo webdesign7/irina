@@ -48,6 +48,10 @@ class AppServiceProvider extends ServiceProvider
             NavigationLink::make()->forSingleton('servicePage')
         );
 
+        TwillNavigation::addLink(
+            NavigationLink::make()->forModule('pages')
+        );
+
         TwillAppSettings::registerSettingsGroup(
             SettingsGroup::make()
                 ->name('seo')

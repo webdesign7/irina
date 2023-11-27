@@ -5,7 +5,7 @@
     <style>
         .jumbotron {
             background-size: cover;
-            background-image: url('/images/services-bg-1.jpg');
+            background-image: url('/images/services-bg-2.jpg');
         }
 
         .jumbotron .container {

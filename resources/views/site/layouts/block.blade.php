@@ -117,7 +117,7 @@
                     <li><a href="{{route('about')}}">{{__('homepage.navigation.about')}}</a></li>
                     <li><a href="{{route('services')}}">{{__('homepage.navigation.services')}}</a></li>
                     <li><a href="{{route('contact')}}">{{__('homepage.navigation.contact')}}</a></li>
-                    <li><a href="#">{{__('homepage.navigation.terms')}}</a></li>
+                    <li><a href="{{route('page', \App\Models\Page::find(1)->slug)}}">{{__('homepage.navigation.terms')}}</a></li>
                     <li>
 
                         <ul class="languages list-inline">

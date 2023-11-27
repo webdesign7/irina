@@ -16,7 +16,7 @@
 
             <!-- slider slides-->
             <div class="single-item">
-                <div class="slide box--1" style="background: url('/images/slider1.jpeg');">
+                <div class="slide box--1" style="background: url('/images/slider1.jpeg'); background-position: center bottom !important">
                     <div class="container-fluid d-flex align-items-center h-100">
                         <div class="row">
                             <div class="col-12">

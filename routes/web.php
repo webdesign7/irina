@@ -3,6 +3,7 @@
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomepageController;
+use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Frontend\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,9 @@ Route::group([
 
     Route::get(LaravelLocalization::transRoute('routes.contact'), ContactController::class)
         ->name('contact');
+
+    Route::get(LaravelLocalization::transRoute('routes.page'), [PageController::class, 'show'])
+        ->name('page');
 
     Route::get(
         LaravelLocalization::transRoute('routes.about'), AboutController::class
