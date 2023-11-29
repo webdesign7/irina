@@ -38,11 +38,13 @@ class TestimonialController extends BaseModuleController
                 ->fields([
                     Input::make()
                         ->required()
+                        ->translatable()
                         ->name('author'),
                     Input::make()
                         ->type('textarea')
                         ->maxLength(100)
                         ->required()
+                        ->translatable()
                         ->name('content'),
                 ])
         );

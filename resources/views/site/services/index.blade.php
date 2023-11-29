@@ -124,7 +124,6 @@
                         <div class="col-lg-12">
                             @php
                                 $currentLocale = App::currentLocale();
-                                $halved = array_chunk($servicePage->services, ceil(count($servicePage->services)/2));
                             @endphp
                             <ul>
                             @foreach($servicePage->services as $item)

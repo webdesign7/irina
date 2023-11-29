@@ -102,14 +102,30 @@
                 </div>
                 <div class="col-12">
                     <div class="list-testimonials">
+                        @php
+                            $currentLocale = App::currentLocale();
+                        @endphp
 
                         @foreach($testimonials as $testimonial)
                             <div class="testimonial-box">
-                                <p>{{$testimonial['content']}}</p>
-                                <span class="rating" data-rating="5">
-                            <span aria-hidden="true">★★★★★</span>
-                        </span>
-                                <h6>{{$testimonial['author']}}</h6>
+                                @if (isset($testimonial['content'][$currentLocale]))
+
+                                    <p>{{$testimonial['content'][$currentLocale]}}</p>
+                                    <span class="rating" data-rating="5">
+                                        <span aria-hidden="true">★★★★★</span>
+                                    </span>
+                                    <h6>{{$testimonial['author'][$currentLocale]}}</h6>
+
+                                @else
+
+                                    <p>{{$testimonial['content']}}</p>
+                                    <span class="rating" data-rating="5">
+                                        <span aria-hidden="true">★★★★★</span>
+                                    </span>
+                                    <h6>{{$testimonial['author']}}</h6>
+
+                                @endif
+
                             </div>
                         @endforeach
 
