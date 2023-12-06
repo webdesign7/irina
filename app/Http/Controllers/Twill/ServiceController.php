@@ -76,7 +76,7 @@ class ServiceController extends BaseModuleController
 
         $form->add(
             Wysiwyg::make()->name('description')
-                ->toolbarOptions([ [ 'header' => [1, 2, false] ], 'ordered', 'bullet', 'link', 'image' ])
+                ->toolbarOptions([ [ 'header' => [1, 2, false] ], 'ordered', 'bullet','bold', 'link', 'blockquote', 'image' ])
                 ->label('Description')->translatable()
         );
 

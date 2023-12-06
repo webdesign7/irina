@@ -186,6 +186,10 @@ footer ul li a {
     color: #d2d2d2
 }
 
+.page blockquote {
+    color: brown;
+}
+
 @media (max-width: 767px) {
     .about-us-section .description {
         text-align: center;

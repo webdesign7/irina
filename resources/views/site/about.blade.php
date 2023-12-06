@@ -7,7 +7,7 @@
         .jumbotron {
             background-size: cover;
             background-position: bottom;
-            background-image: url('/images/about-bg-3.jpg');
+            background-image: url('/images/about-bg-1.jpg');
         }
 
         .jumbotron .container {
