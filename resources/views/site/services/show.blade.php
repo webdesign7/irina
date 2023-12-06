@@ -11,7 +11,7 @@
         }
 
         .overlay {
-            height: 500px;
+            height: inherit;
             width: 100vw;
             background: black;
             overflow: hidden;
