@@ -15,6 +15,7 @@
 
         .jumbotron {
             background-image: url('/images/contact-bg.jpg');
+            background-position: bottom center;
         }
 
         .jumbotron .container {
@@ -82,20 +83,6 @@
                                                         <li>A: {{TwillAppSettings::get('contact.contact-details.address')}}</li>
                                                         <li>P: {{TwillAppSettings::get('contact.contact-details.phone')}}</li>
                                                         <li>E: {{TwillAppSettings::get('contact.contact-details.email')}}</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="card text-center">
-                                            <div class="card-body">
-                                                <h5 class="card-title">{{__('contact.work_time')}}</h5>
-                                                <div class="card-text">
-                                                    <ul class="list-unstyled">
-                                                        <li>{{__('contact.work_days')}}: 09:00 – 20:00</li>
-                                                        <li>{{__('contact.saturday')}}: 10:00 – 18:00</li>
-                                                        <li>{{__('contact.sunday')}}: {{__('contact.closed')}}</li>
                                                     </ul>
                                                 </div>
                                             </div>
