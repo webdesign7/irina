@@ -4,10 +4,19 @@
 
 
     <style>
+        .jumbotron h1 {
+            background-color: rgba(0, 0, 0, 0.4);
+            line-height: 70px;
+            -webkit-box-decoration-break: clone;
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
         .jumbotron {
             background-size: cover;
             background-position: bottom;
-            background-image: url('/images/about-bg-1.jpg');
+            background-image: url('/images/about-bg-4.jpg');
         }
 
         .jumbotron .container {
@@ -30,6 +39,10 @@
             flex-direction: column;
             justify-content: center;
             padding: 20px;
+        }
+
+        .featurette p {
+            color: white;
         }
 
         .featurette-image-bg {

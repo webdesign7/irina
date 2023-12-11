@@ -3,9 +3,18 @@
 @section('content')
 
     <style>
+        h1 {
+            background-color: rgba(0, 0, 0, 0.3);
+            line-height: 70px;
+            -webkit-box-decoration-break: clone;
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
         .jumbotron {
             background-size: cover;
-            background-image: url('/images/services-bg-2.jpg');
+            background-image: url('/images/services-bg-3.jpg');
         }
 
         .jumbotron .container {
@@ -48,10 +57,17 @@
         }
 
         .featurette-image-bg {
-            height: 600px;
+            height: 100%;
             background-size: cover;
             background-image: url('/images/about-me-sitting.jpg');
         }
+
+        @media (max-width: 767px) {
+            .featurette-image-bg {
+                height: 500px;
+            }
+        }
+
 
     </style>
 

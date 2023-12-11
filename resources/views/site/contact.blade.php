@@ -3,8 +3,18 @@
 @section('content')
 
     <style>
+
+        .jumbotron h1 {
+            background-color: rgba(0, 0, 0, 0.4);
+            line-height: 70px;
+            -webkit-box-decoration-break: clone;
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
         .jumbotron {
-            background-image: url('/images/bg3.jpg');
+            background-image: url('/images/contact-bg.jpg');
         }
 
         .jumbotron .container {

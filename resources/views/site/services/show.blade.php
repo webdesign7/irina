@@ -4,6 +4,16 @@
 
 
     <style>
+
+        h1 {
+            background-color: rgba(0, 0, 0, 0.4);
+            line-height: 70px;
+            -webkit-box-decoration-break: clone;
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
         .jumbotron {
             background-size: cover;
             background-position: center;
@@ -15,7 +25,7 @@
             width: 100vw;
             background: black;
             overflow: hidden;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0);
         }
 
         .jumbotron .container {
