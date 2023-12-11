@@ -190,6 +190,8 @@ footer ul li a {
 
 .page blockquote {
     color: brown;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .service-page p, .contact-page p  {
