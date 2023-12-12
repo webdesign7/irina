@@ -46,7 +46,7 @@
         }
 
         .featurette-image-bg {
-            height: 500px;
+            height: 100%;
             background-size: cover;
             background-position: center;
             background-image: url('/images/irina.jpg');
@@ -76,16 +76,13 @@
             <div class="offset-md-1 col-md-5 left">
 
                 <div class="content">
-                    <p>ABOUT ME</p>
+                    <p>{{__('about.about_me_header')}}</p>
                     <h2 class="featurette-heading mb-3">{{$page->name}}</h2>
                     <p><strong>{{$page->job_title}}</strong></p>
                     <p>{{$page->bio}}</p>
                     <br>
 
-
                 </div>
-
-
 
             </div>
             <div class="col-md-6 right">
