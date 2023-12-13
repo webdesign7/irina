@@ -22,6 +22,7 @@ class Service extends Model implements Sortable, LocalizedUrlRoutable
         'title',
         'subtitle',
         'thumb',
+        'circle_image',
         'description',
         'position',
         'short_description',
@@ -47,6 +48,14 @@ class Service extends Model implements Sortable, LocalizedUrlRoutable
                     'ratio' => 16 / 5,
                 ],
             ],
+            'mobile' => [
+                [
+                    'name' => 'mobile',
+                    'ratio' => 1,
+                ],
+            ],
+        ],
+        'circle_image' => [
             'mobile' => [
                 [
                     'name' => 'mobile',

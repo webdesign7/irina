@@ -46,7 +46,7 @@
 
                     <div class="col-12 col-md-4">
                         <a href="{{ route('service', $service->slug) }}" class="rounded-circle">
-                            <div class="bg-image" style="background-image: url({{ $service->cmsImage('thumb','mobile') }}); background-size: 330px"></div>
+                            <div class="bg-image" style="background-image: url({{ $service->cmsImage('circle_image','mobile') }}); background-size: 330px"></div>
                             <div class="v-align">
                                 <p><b>{{$service->title}}</b></p>
                                 <span>

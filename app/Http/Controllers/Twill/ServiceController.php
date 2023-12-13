@@ -95,6 +95,13 @@ class ServiceController extends BaseModuleController
                 ->max(1)
         );
 
+        $form->add(
+            Medias::make()
+                ->name('circle_image')
+                ->label(twillTrans('Circle image'))
+                ->max(1)
+        );
+
         return $form;
     }
 }

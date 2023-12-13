@@ -100,7 +100,7 @@
 
                                             <div class="rounded-circle overflow-hidden position-absolute">
                                                 <img class="card-img-top img-cover"
-                                                     src="{{ $service->cmsImage('thumb','mobile') }}">
+                                                     src="{{ $service->cmsImage('circle_image','mobile') }}">
                                             </div>
 
                                         </div>
