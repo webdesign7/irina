@@ -51,6 +51,13 @@
             background-position: center;
             background-image: url('/images/irina.jpg');
         }
+
+        @media (max-width: 767px) {
+            .featurette-image-bg {
+                height: 400px;
+            }
+        }
+
     </style>
 
     <section class="page contact-page">
