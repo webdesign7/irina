@@ -10,7 +10,7 @@ return [
         'placeholder-name' => 'Please enter your full name ...',
         'placeholder-email' => 'Please enter your email ...',
         'placeholder-text' => 'Your message ... ',
-        '15-m-consultation' => 'Yes, I would like a 15min consultation !',
+        '15-m-consultation' => 'Yes, I would like a 15 min free consultation.',
         'submit-button' => 'Submit enquiry',
         'select-service-placeholder' => 'Choose the service you\'re interested'
     ],

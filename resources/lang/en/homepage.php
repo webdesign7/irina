@@ -7,7 +7,7 @@ return [
     ],
     'testimonials' => 'Testimonials',
     'about-title' => 'About us',
-    'contact_cta' => 'contact us today <span>and find our how can we help you</span>',
+    'contact_cta' => 'contact us today <span>and find out how can we help you</span>',
     'learn_more' => 'learn more',
     'footer' => [
         'contact' => 'Contact',
