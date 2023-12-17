@@ -215,6 +215,10 @@ footer ul li a {
         display: none;
     }
 
+    .contact-cta {
+        padding: 14px 60px;
+    }
+
     footer {
         text-align: center;
     }
