@@ -46,7 +46,7 @@
         }
 
         .featurette-image-bg {
-            min-height: 800px;
+            min-height: 1000px;
             background-size: cover;
             background-position: center;
             background-image: url('/images/irina-1.jpg');
