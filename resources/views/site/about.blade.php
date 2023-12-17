@@ -54,6 +54,7 @@
 
         @media (max-width: 767px) {
             .featurette-image-bg {
+                background-position-x: 0;
                 height: 400px;
             }
         }
