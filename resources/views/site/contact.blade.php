@@ -118,7 +118,7 @@
                                 </div>
                                 <form class="contact-form mb-5" action="https://api.web3forms.com/submit" method="POST">
 
-                                    <input type="hidden" name="access_key" value="8fd55e58-785d-4dd5-9f5f-1d6a312ce2e3">
+                                    <input type="hidden" name="access_key" value="94a98dd3-261c-4c4e-8fcb-85df9ab05288">
 
                                     <div class="row">
                                         <div class="col-md-6">
