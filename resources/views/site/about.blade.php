@@ -49,7 +49,7 @@
             min-height: 800px;
             background-size: cover;
             background-position: center;
-            background-image: url('/images/irina.jpg');
+            background-image: url('/images/irina-1.jpg');
         }
 
         @media (max-width: 767px) {
