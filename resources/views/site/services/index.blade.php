@@ -59,7 +59,7 @@
         .featurette-image-bg {
             height: 100%;
             background-size: cover;
-            background-image: url('/images/about-me-sitting.jpg');
+            background-image: url('/images/about-me-sitting-2.jpg');
         }
 
         @media (max-width: 767px) {
