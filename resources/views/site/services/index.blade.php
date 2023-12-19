@@ -57,8 +57,9 @@
         }
 
         .featurette-image-bg {
-            height: 100%;
+            height: 800px;
             background-size: cover;
+            background-position: top;
             background-image: url('/images/about-me-sitting-2.jpg');
         }
 
