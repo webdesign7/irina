@@ -4,6 +4,14 @@
 
     <style>
 
+        h5 {
+            font-weight: bold;
+        }
+
+        p {
+            color: dimgray;
+        }
+
         .jumbotron h1 {
             background-color: rgba(0, 0, 0, 0.4);
             line-height: 70px;
@@ -50,6 +58,8 @@
             color: dimgray;
         }
 
+
+
     </style>
 
     <section class="page">
@@ -77,11 +87,15 @@
 
                                         <div class="card text-center" >
                                             <div class="card-body">
-                                                <h5 class="card-title">{{__('contact.contact_info')}}</h5>
+                                                <h5 class="card-title text-uppercase">{{__('contact.contact_info')}}</h5>
                                                 <div class="card-text">
                                                     <ul class="list-unstyled">
-                                                        <li>A: {{TwillAppSettings::get('contact.contact-details.address')}}</li>
-                                                        <li>P: {{TwillAppSettings::get('contact.contact-details.phone')}}</li>
+                                                        @if(TwillAppSettings::get('contact.contact-details.address'))
+                                                            <li>A: {{TwillAppSettings::get('contact.contact-details.address')}}</li>
+                                                        @endif
+                                                        @if(TwillAppSettings::get('contact.contact-details.phone'))
+                                                            <li>P: {{TwillAppSettings::get('contact.contact-details.phone')}}</li>
+                                                        @endif
                                                         <li>E: {{TwillAppSettings::get('contact.contact-details.email')}}</li>
                                                     </ul>
                                                 </div>
@@ -92,7 +106,7 @@
 
                                         <div class="card text-center">
                                             <div class="card-body">
-                                                <h5 class="card-title">{{__('contact.follow_us')}}</h5>
+                                                <h5 class="card-title text-uppercase">{{__('contact.follow_us')}}</h5>
                                                 <div class="card-text">
                                                     <ul class="list-inline">
 
@@ -113,8 +127,8 @@
 
                             <div class="col-md-8">
                                 <div class="text-center mb-5">
-                                    <p class="text-uppercase">{{__('contact.contact') }}</p>
-                                    <h2>{{__('contact.contact_h2')}}</h2>
+                                    <h5 class="text-uppercase">{{__('contact.contact') }}</h5>
+                                    <p >{{__('contact.contact_h2')}}</p>
                                 </div>
                                 <form class="contact-form mb-5" action="https://api.web3forms.com/submit" method="POST">
 
@@ -140,9 +154,10 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <select name="interested_service" class="form-control">
-                                                    <option value="">
+                                                    <option value="" disabled selected>
                                                         {{__('contact.form.select-service-placeholder')}}
                                                     </option>
+
                                                     @foreach($services as $service);
                                                         <option value="{{$service->title}}">{{$service->title}}</option>
                                                     @endforeach
