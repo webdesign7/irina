@@ -127,7 +127,7 @@
                                     <a hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
                                        class="@if($currentLocale === $localeCode) active @endif">
                                         @if($localeCode === 'en')
-                                            <span class="fp fp-rounded gb-eng"></span>
+                                            <span class="fp fp-rounded gb"></span>
                                         @endif
 
                                         @if($localeCode === 'ru')

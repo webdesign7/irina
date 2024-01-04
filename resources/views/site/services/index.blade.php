@@ -86,7 +86,6 @@
             <div class="row">
 
                 <div class="text-center mb-5">
-                    <p class="text-uppercase">{{__('services.title')}}</p>
                     <h2>{{__('services.subtitle')}}</h2>
                 </div>
 

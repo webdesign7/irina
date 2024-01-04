@@ -73,8 +73,6 @@
         <div class="container-fluid pt-5 pb-5 mb-5">
             <div class="row">
                 <div class="col-12">
-                    <h1>{{$page->title}}</h1>
-                    <br>
                     {!! $page->description !!}
                 </div>
             </div>
