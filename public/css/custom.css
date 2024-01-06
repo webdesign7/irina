@@ -244,7 +244,7 @@ footer ul li a {
         font-size: 1.1em;
     }
 
-    .service-box .card-text {
+    .service-box .card-text, .service-box .card-title {
         max-width: 210px;
     }
 
