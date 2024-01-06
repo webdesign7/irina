@@ -1,3 +1,6 @@
+@section('title', __('services.title') . ' | ' . TwillAppSettings::getTranslated('seo.seo.title'))
+@section('description', $servicePage->block_title . ' | ' . TwillAppSettings::getTranslated('seo.seo.title'))
+
 @extends('site.layouts.block')
 
 @section('content')

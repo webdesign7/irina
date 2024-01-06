@@ -18,7 +18,9 @@
     <link type="text/css" rel="stylesheet" href="https://cosminlazar.com/Webdesign7/eph.com/css/style.css?v=1" />
     <link type="text/css" rel="stylesheet" href="/css/custom.css?v={{time()}}" />
 
-    <title>{{TwillAppSettings::getTranslated('seo.seo.title')}}</title>
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('description')">
+
 </head>
 <body class="navbar-fixed">
 

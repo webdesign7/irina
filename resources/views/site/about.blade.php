@@ -1,3 +1,6 @@
+@section('title', $page->title . ' | ' . TwillAppSettings::getTranslated('seo.seo.title'))
+@section('description', '"Effective Psychological Help" is an international boutique consultancy providing professional psychological help in London, Nice and on-line')
+
 @extends('site.layouts.block')
 
 @section('content')

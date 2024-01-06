@@ -24,5 +24,5 @@ return [
         'contact' => 'Contact',
         'terms' => 'Terms & Conditions',
     ],
-    'header-title' => 'Effective <br> Psychological Help'
+    'header-title' => 'Effective <br> Psychological Help',
 ];

@@ -1,3 +1,6 @@
+@section('title', strip_tags(__('homepage.header-title')))
+@section('description', $homepage->description)
+
 @extends('site.layouts.block')
 
 @section('content')
