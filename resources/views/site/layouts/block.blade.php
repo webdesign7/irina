@@ -102,15 +102,18 @@
             </div>
             <div class="col-md-3">
                 <h5>{{__('homepage.footer.follow')}}</h5>
-                <ul class="list-inline">
-                    @foreach(TwillAppSettings::get('contact.contact-details.social-media-links') as $item)
-                        <li class="list-inline-item">
-                            <a  target="_blank " href="{{$item->content['link']}}"
-                                class="fa fa-md fa-{{$item->content['platform']}}">
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
+                @if(TwillAppSettings::get('contact.contact-details.social-media-links'))
+                    <ul class="list-inline">
+                        @foreach(TwillAppSettings::get('contact.contact-details.social-media-links') as $item)
+                            <li class="list-inline-item">
+                                <a  target="_blank " href="{{$item->content['link']}}"
+                                    class="fa fa-md fa-{{$item->content['platform']}}">
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+
             </div>
             <div class="col-md-3">
                 <h5>{{__('homepage.footer.site_navigation')}}</h5>
