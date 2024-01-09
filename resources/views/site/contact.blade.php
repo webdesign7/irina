@@ -113,12 +113,14 @@
                                                 <div class="card-text">
                                                     <ul class="list-inline">
 
-                                                        @foreach(TwillAppSettings::get('contact.contact-details.social-media-links') as $item)
-                                                            <li class="list-inline-item">
-                                                                <a  target="_blank " href="{{$item->content['link']}}"
-                                                                    class="fa fa-md fa-{{$item->content['platform']}}"></a>
-                                                            </li>
-                                                        @endforeach
+                                                        @if(TwillAppSettings::get('contact.contact-details.social-media-links'))
+                                                            @foreach(TwillAppSettings::get('contact.contact-details.social-media-links') as $item)
+                                                                <li class="list-inline-item">
+                                                                    <a  target="_blank " href="{{$item->content['link']}}"
+                                                                        class="fa fa-md fa-{{$item->content['platform']}}"></a>
+                                                                </li>
+                                                            @endforeach
+                                                        @endif
 
                                                     </ul>
                                                 </div>
